@@ -8,9 +8,8 @@
     <AssemblyName>dbup-core</AssemblyName>
     <RootNamespace>DbUp</RootNamespace>
     <PackageId>dbup-core-net6</PackageId>
-    <PackageIconUrl>https://raw.githubusercontent.com/Havunen/DbUp/master/dbup-icon.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/Havunen/DbUp/tree/net-5-6</PackageProjectUrl>
-    <PackageLicenseUrl>http://www.opensource.org/licenses/mit-license.php</PackageLicenseUrl>
+    <license>MIT</license>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
