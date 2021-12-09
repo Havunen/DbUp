@@ -1,19 +1,15 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Description>DbUp makes it easy to deploy and upgrade SQL Server databases by running change scripts. This is the core library and should be used in conjunction with the database specific package (eg dbup-sqlserver, dbup-mysql)</Description>
+    <Description>This is fork of DbUp for .NET5 and .NET6. DbUp makes it easy to deploy and upgrade SQL Server databases by running change scripts. This is the core library and should be used in conjunction with the database specific package (eg dbup-sqlserver, dbup-mysql)</Description>
     <Title>DbUp Core library</Title>
-    <Authors>Paul Stovell;Jim Burger;Jake Ginnivan;Damian Maclennan</Authors>
+    <Authors>Paul Stovell;Jim Burger;Jake Ginnivan;Damian Maclennan;Sampo Kivistö</Authors>
     <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
     <AssemblyName>dbup-core</AssemblyName>
     <RootNamespace>DbUp</RootNamespace>
-    <AssemblyOriginatorKeyFile>../dbup.snk</AssemblyOriginatorKeyFile>
-    <SignAssembly>true</SignAssembly>
-    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">true</PublicSign>
-    <PackageId>dbup-core</PackageId>
-    <PackageReleaseNotes>https://github.com/DbUp/DbUp/releases</PackageReleaseNotes>
-    <PackageIconUrl>https://raw.github.com/DbUp/DbUp/master/src/Information/dbup-icon.png</PackageIconUrl>
-    <PackageProjectUrl>https://dbup.github.io</PackageProjectUrl>
+    <PackageId>dbup-core-net6</PackageId>
+    <PackageIconUrl>https://raw.githubusercontent.com/Havunen/DbUp/master/dbup-icon.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/Havunen/DbUp/tree/net-5-6</PackageProjectUrl>
     <PackageLicenseUrl>http://www.opensource.org/licenses/mit-license.php</PackageLicenseUrl>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
