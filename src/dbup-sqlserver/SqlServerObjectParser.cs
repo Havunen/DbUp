@@ -17,7 +17,7 @@ namespace DbUp.SqlServer
 
         /// <summary>
         /// Quotes the SQL identifier to allow Special characters in the object name.
-        /// This function implements System.Data.SqlClient.SqlCommandBuilder.QuoteIdentifier() with an additional
+        /// This function implements Microsoft.Data.SqlClient.SqlCommandBuilder.QuoteIdentifier() with an additional
         /// validation which is missing from the SqlCommandBuilder version.
         /// </summary>
         /// <param name="objectName">Name of the object to quote.</param>

@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>net46;netcoreapp2.0</TargetFrameworks>
+    <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
     <AssemblyName>dbup-tests</AssemblyName>
     <PackageId>dbup-tests</PackageId>
     <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
@@ -15,20 +15,18 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\dbup-core\dbup-core.csproj" />
-    <ProjectReference Include="..\dbup-oracle\dbup-oracle.csproj" />
-    <ProjectReference Include="..\dbup-redshift\dbup-redshift.csproj" />
     <ProjectReference Include="..\dbup-sqlserver\dbup-sqlserver.csproj" />
-    <ProjectReference Include="..\dbup-sqlite\dbup-sqlite.csproj" />
-    <ProjectReference Include="..\dbup-mysql\dbup-mysql.csproj" />
-    <ProjectReference Include="..\dbup-postgresql\dbup-postgresql.csproj" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.5.0" />
-    <PackageReference Include="xunit" Version="2.3.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.3.1" />
-    <PackageReference Include="Serilog" Version="2.6.0" />
-    <PackageReference Include="Shouldly" Version="2.8.1" />
-    <PackageReference Include="Assent" Version="1.2.1" />
-    <PackageReference Include="TestStack.BDDfy" Version="4.3.1" />
-    <PackageReference Include="NSubstitute" Version="3.1.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Serilog" Version="2.10.0" />
+    <PackageReference Include="Shouldly" Version="4.0.3" />
+    <PackageReference Include="Assent" Version="1.7.0" />
+    <PackageReference Include="TestStack.BDDfy" Version="4.3.2" />
+    <PackageReference Include="NSubstitute" Version="4.2.2" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
     <ProjectReference Include="..\dbup-sqlce\dbup-sqlce.csproj" />

@@ -73,7 +73,7 @@ namespace DbUp.SqlServer.Helpers
     public class TemporarySqlDatabase : System.IDisposable
     {
         public TemporarySqlDatabase(string name) { }
-        public TemporarySqlDatabase(System.Data.SqlClient.SqlConnectionStringBuilder connectionStringBuilder) { }
+        public TemporarySqlDatabase(Microsoft.Data.SqlClient.SqlConnectionStringBuilder connectionStringBuilder) { }
         public TemporarySqlDatabase(string name, string instanceName) { }
         public DbUp.Helpers.AdHocSqlRunner AdHoc { get; }
         public string ConnectionString { get; }

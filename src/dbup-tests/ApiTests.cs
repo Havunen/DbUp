@@ -9,7 +9,6 @@ using System.Runtime.Versioning;
 using System.Text;
 using Assent;
 using DbUp.Engine;
-using DbUp.Oracle;
 using NSubstitute.Core;
 using Xunit;
 
@@ -20,16 +19,6 @@ namespace DbUp.Tests
         [Theory]
         [InlineData(typeof(UpgradeEngine))]
         [InlineData(typeof(SqlServerExtensions), true)]
-        [InlineData(typeof(SQLiteExtensions))]
-        [InlineData(typeof(MySqlExtensions))]
-        [InlineData(typeof(OracleExtensions))]
-        [InlineData(typeof(PostgresqlExtensions))]
-        [InlineData(typeof(RedshiftExtensions))]
-#if !NETCORE
-        [InlineData(typeof(FirebirdExtensions))]
-        [InlineData(typeof(SqlCeExtensions))]
-        [InlineData(typeof(SqlAnywhereExtensions))]
-#endif
         public void NoPublicApiChanges(Type type, bool differByFramework = false)
         {
             var assembly = type.Assembly;
