@@ -4,7 +4,7 @@
     <Description>DbUp makes it easy to deploy and upgrade SQL Server databases by running change scripts.</Description>
     <Title>DbUp MS Sql Server Support</Title>
     <Authors>Paul Stovell;Jim Burger;Jake Ginnivan;Damian Maclennan</Authors>
-    <TargetFrameworks>net5.0</TargetFrameworks>
+    <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
     <AssemblyName>dbup-sqlserver</AssemblyName>
     <AssemblyOriginatorKeyFile>../dbup.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
