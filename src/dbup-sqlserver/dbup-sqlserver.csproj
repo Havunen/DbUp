@@ -4,7 +4,7 @@
     <Description>This is fork of DbUp for .NET5 and .NET6. DbUp makes it easy to deploy and upgrade SQL Server databases by running change scripts.</Description>
     <Title>DbUp MS Sql Server Support</Title>
     <Authors>Paul Stovell;Jim Burger;Jake Ginnivan;Damian Maclennan;Sampo Kivistö</Authors>
-    <Version>4.5.0</Version>
+    <Version>4.6.0</Version>
     <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
     <AssemblyName>dbup-sqlserver</AssemblyName>
     <PackageId>dbup-sqlserver-net6</PackageId>
@@ -23,7 +23,6 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.Data.SqlClient" Version="4.*" />
-    <PackageReference Include="Microsoft.Azure.Services.AppAuthentication" Version="1.6.2" />
   </ItemGroup>
 
 </Project>
