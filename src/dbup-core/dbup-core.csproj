@@ -18,7 +18,6 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <DefineConstants>$(DefineConstants);LIBLOG_PORTABLE;LIBLOG_PROVIDERS_ONLY</DefineConstants>
   </PropertyGroup>
-  </ItemGroup>
 
   <ItemGroup>
     <None Visible="false" Include="../../dbup-icon.png" Pack="True" PackagePath="" />

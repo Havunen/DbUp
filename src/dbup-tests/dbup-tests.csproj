@@ -17,26 +17,17 @@
   <ItemGroup>
     <ProjectReference Include="..\dbup-core\dbup-core.csproj" />
     <ProjectReference Include="..\dbup-sqlserver\dbup-sqlserver.csproj" />
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.0.0" />
-    <PackageReference Include="xunit" Version="2.4.1" />
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.3.1" />
+    <PackageReference Include="xunit" Version="2.4.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Serilog" Version="2.10.0" />
-    <PackageReference Include="Shouldly" Version="4.0.3" />
-    <PackageReference Include="Assent" Version="1.7.0" />
+    <PackageReference Include="Serilog" Version="2.12.0" />
+    <PackageReference Include="Shouldly" Version="4.1.0" />
+    <PackageReference Include="Assent" Version="1.8.2" />
     <PackageReference Include="TestStack.BDDfy" Version="4.3.2" />
-    <PackageReference Include="NSubstitute" Version="4.2.2" />
-  </ItemGroup>
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net46' ">
-    <ProjectReference Include="..\dbup-sqlce\dbup-sqlce.csproj" />
-    <ProjectReference Include="..\dbup-firebird\dbup-firebird.csproj" />
-    <ProjectReference Include="..\dbup-sqlanywhere\dbup-sqlanywhere.csproj" />
-    <PackageReference Include="Microsoft.SqlServer.Compact" Version="4.0.8876.1" />
-    <PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" />
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
+    <PackageReference Include="NSubstitute" Version="4.4.0" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="**\*.received.cs" />

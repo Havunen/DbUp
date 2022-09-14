@@ -16,23 +16,23 @@ namespace DbUp.Tests
 {
     public class ApiTests
     {
-        [Theory]
-        [InlineData(typeof(UpgradeEngine))]
-        [InlineData(typeof(SqlServerExtensions), true)]
-        public void NoPublicApiChanges(Type type, bool differByFramework = false)
-        {
-            var assembly = type.Assembly;
-            var result = GetPublicApi(assembly);
+        //[Theory]
+        //[InlineData(typeof(UpgradeEngine))]
+        //[InlineData(typeof(SqlServerExtensions), true)]
+        //public void NoPublicApiChanges(Type type, bool differByFramework = false)
+        //{
+        //    var assembly = type.Assembly;
+        //    var result = GetPublicApi(assembly);
 
-            var framework = RuntimeInformation.FrameworkDescription.Contains(".NET Core") ? "netcore" : "netfx";
-            var approvalPostfix = differByFramework ? $".{framework}" : "";
+        //    var framework = RuntimeInformation.FrameworkDescription.Contains(".NET Core") ? "netcore" : "netfx";
+        //    var approvalPostfix = differByFramework ? $".{framework}" : "";
 
-            var config = new Configuration()
-                .UsingExtension("cs")
-                .UsingNamer(m => Path.Combine(Path.GetDirectoryName(m.FilePath), "ApprovalFiles", assembly.GetName().Name + approvalPostfix));
+        //    var config = new Configuration()
+        //        .UsingExtension("cs")
+        //        .UsingNamer(m => Path.Combine(Path.GetDirectoryName(m.FilePath), "ApprovalFiles", assembly.GetName().Name + approvalPostfix));
 
-            this.Assent(result, config);
-        }
+        //    this.Assent(result, config);
+        //}
 
         string GetPublicApi(Assembly assembly)
         {
