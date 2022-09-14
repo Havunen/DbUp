@@ -43,6 +43,25 @@ public static class SqlServerExtensions
         return SqlDatabase(new SqlConnectionManager(connectionString), schema);
     }
 
+#if SUPPORTS_AZURE_AD
+    /// <summary>Creates an upgrader for SQL Server databases.</summary>
+    /// <param name="supported">Fluent helper type.</param>
+    /// <param name="connectionString">The connection string.</param>
+    /// <param name="schema">The SQL schema name to use. Defaults to 'dbo' if <see langword="null" />.</param>
+    /// <param name="useAzureSqlIntegratedSecurity">Whether to use Azure SQL Integrated Security</param>
+    /// <returns>A builder for a database upgrader designed for SQL Server databases.</returns>
+    [Obsolete("Use \"AzureSqlDatabaseWithIntegratedSecurity(this SupportedDatabases, string, string)\" if passing \"true\" to \"useAzureSqlIntegratedSecurity\".")]
+    public static UpgradeEngineBuilder SqlDatabase(this SupportedDatabases supported, string connectionString, string schema, bool useAzureSqlIntegratedSecurity)
+    {
+        if (useAzureSqlIntegratedSecurity)
+        {
+            return supported.AzureSqlDatabaseWithIntegratedSecurity(connectionString, schema);
+        }
+
+        return supported.SqlDatabase(new SqlConnectionManager(connectionString), schema);
+    }
+#endif
+
     /// <summary>
     /// Creates an upgrader for SQL Server databases.
     /// </summary>
@@ -173,7 +192,7 @@ public static class SqlServerExtensions
             }
             catch (SqlException)
             {
-                // Failed to connect to master, lets try direct  
+                // Failed to connect to master, lets try direct
                 if (DatabaseExistsIfConnectedToDirectly(logger, connectionString, databaseName))
                     return;
 
@@ -290,7 +309,7 @@ public static class SqlServerExtensions
         masterConnectionStringBuilder.InitialCatalog = "master";
         var logMasterConnectionStringBuilder = new SqlConnectionStringBuilder(masterConnectionStringBuilder.ConnectionString)
         {
-            Password = string.Empty.PadRight(masterConnectionStringBuilder.Password.Length, '*')
+            Password = "******"
         };
 
         logger.WriteInformation("Master ConnectionString => {0}", logMasterConnectionStringBuilder.ConnectionString);
